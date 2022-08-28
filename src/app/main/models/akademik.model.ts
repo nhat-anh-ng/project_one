@@ -2,9 +2,8 @@ export interface Akademik {
     id: string,
     name:string,
     address: string,
-    phone: string,
+    phone: number,
     email: string,
     sector: 'public' | 'private',
-    url: string,
-    description: string
+    url: string
 }

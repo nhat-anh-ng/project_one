@@ -6,7 +6,7 @@ import { AkademikCardComponent } from './components/akademik-card/akademik-card.
 import { AkademikSingleComponent } from './containers/akademik-single/akademik-single.component';
 import { AkademikFormComponent } from './components/akademik-form/akademik-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     AkademikListComponent, AkademikSingleComponent

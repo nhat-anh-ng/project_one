@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Akademik } from '../../models/akademik.model';
 
 @Component({
   selector: 'app-akademik-form',
@@ -7,6 +8,8 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./akademik-form.component.scss']
 })
 export class AkademikFormComponent implements OnInit{
+  @Output() create: EventEmitter<Akademik> = new EventEmitter<Akademik>();
+
   title = 'ReactiveForm';
   akademikForm!: FormGroup;
 
@@ -23,7 +26,7 @@ export class AkademikFormComponent implements OnInit{
   }
 
   onSubmit(){
-    console.log(this.akademikForm)
+    this.create.emit(this.akademikForm.value)
   }
 
 }

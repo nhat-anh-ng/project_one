@@ -1,7 +1,7 @@
 {
   "akademikList": [
     {
-      "id": "1",
+      "id": "0",
       "name": "Dom Studenta Nr 1 „Muchomorek”",
       "address": "ul. Żwirki i Wigury 97/99",
       "phone": 8221919,
@@ -10,7 +10,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.17362977029205!2d20.987124566448273!3d52.21234396484965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd9949893341%3A0xfef1c040e051e725!2sDormitory%20no.%201%20University%20of%20Warsaw!5e0!3m2!1sen!2sus!4v1661533909181!5m2!1sen!2sus"
     },
     {
-      "id": "2",
+      "id": "1",
       "name": "Dom Studenta Nr 2 „Żwirek”",
       "address": "Żwirki i Wigury 95/97",
       "phone": 5548000,
@@ -19,7 +19,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.944569796435!2d20.9873946!3d52.2118423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe8a5e01bf0d483ef!2sStudent%20Dorm%20Number%202%2C%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661531461909!5m2!1sen!2spl"
     },
     {
-      "id": "3",
+      "id": "2",
       "name": "Dom Studenta Nr 3 „Kic”",
       "address": "ul. Kickiego 9",
       "phone": 5530001,
@@ -28,7 +28,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9770.958907978667!2d21.0796766!3d52.248111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae4c91d06137d32d!2sDormitory%20No.%203%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661534854610!5m2!1sen!2spl"
     },
     {
-      "id": "4",
+      "id": "3",
       "name": "Dom Studenta Nr 4 „Zamenhof”",
       "address": "ul. Zamenhofa 10A",
       "phone": 5549200,
@@ -37,7 +37,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9770.958907978667!2d21.0796766!3d52.248111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae4c91d06137d32d!2sDormitory%20No.%203%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661534854610!5m2!1sen!2spl"
     },
     {
-      "id": "5",
+      "id": "4",
       "name": "Dom Studenta Nr 5 „Smyczkowa”",
       "address": "ul. Smyczkowa 5/7",
       "phone": 5533000,
@@ -46,7 +46,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9770.958907978667!2d21.0796766!3d52.248111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae4c91d06137d32d!2sDormitory%20No.%203%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661534854610!5m2!1sen!2spl"
     },
     {
-      "id": "6",
+      "id": "5",
       "name": "Dom Studenta Nr 6 „Radomska”",
       "address": "ul. Radomska 11",
       "phone": 5549400,
@@ -55,7 +55,7 @@
       "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9770.958907978667!2d21.0796766!3d52.248111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae4c91d06137d32d!2sDormitory%20No.%203%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661534854610!5m2!1sen!2spl"
     }
   ],
-  "newAkademik": [
+  "akademikNew": [
     {
       "name": "test",
       "address": "test",

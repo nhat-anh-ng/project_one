@@ -1,3 +1,4 @@
 <div>
-    <app-akademik-card class="mapUrl" *ngFor="let akademik of akademikList ; trackBy: trackById" [akademik]="akademik" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></app-akademik-card>
+    <app-akademik-card class="mapUrl" *ngFor="let akademik of akademikList ; let i = index ; trackBy: trackById" [index]="i" [akademik]="akademik"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >
+    </app-akademik-card>
 </div>

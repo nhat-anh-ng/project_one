@@ -1,9 +1,10 @@
 export interface Akademik {
-    id: string,
+    id?: number,
     name:string,
     address: string,
     phone: number,
     email: string,
     sector: 'public' | 'private',
     url: string
+    price?: number
 }

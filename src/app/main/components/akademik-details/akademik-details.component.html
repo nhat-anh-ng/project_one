@@ -1,12 +1,11 @@
 <div>
     <iframe [src]='akademik.url | safe' frameborder="0"></iframe>
 </div>
-<div class="akademik-card" >
+<div class="akademik-card">
     <a routerLink="/akademikList/{{akademik.id}}">{{ akademik.name }}</a>
     <p>{{ akademik.address }}</p>
     <p> (0-22){{ akademik.phone }}</p>
     <p>{{ akademik.email }}</p>
     <p>{{ akademik.sector }}</p>
 
-   <a [routerLink]="[index]"><button (click)="viewDetails(akademik)">View details</button></a> 
 </div>

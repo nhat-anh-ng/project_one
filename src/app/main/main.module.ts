@@ -1,29 +1,43 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AkademikListComponent } from './containers/akademik-list/akademik-list.component';
+import { AkademikNewComponent } from './containers/akademik-new/akademik-new.component';
+import { AkademikInfopageComponent } from './containers/akademik-infopage/akademik-infopage.component';
+import { RouterModule, Routes } from '@angular/router';
 import { SafePipe } from './pipes/safe.pipe';
 import { AkademikCardComponent } from './components/akademik-card/akademik-card.component';
-import { AkademikSingleComponent } from './containers/akademik-single/akademik-single.component';
 import { AkademikFormComponent } from './components/akademik-form/akademik-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { AkademikDetailsComponent } from './components/akademik-details/akademik-details.component';
 
+
+
+
+
+export const routes: Routes = [
+  { path: 'akademikList', component:AkademikListComponent },
+  { path: 'registration', component:AkademikNewComponent },
+  { path: 'akademikList/:id', component:AkademikInfopageComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'akademikList'}
+]
 
 @NgModule({
   declarations: [
     AkademikListComponent,
     SafePipe,
     AkademikCardComponent,
-    AkademikSingleComponent,
-    AkademikFormComponent
+    AkademikNewComponent,
+    AkademikFormComponent,
+    AkademikInfopageComponent,
+    AkademikDetailsComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    RouterModule.forChild(routes)
   ],
   exports: [
-    AkademikListComponent, AkademikSingleComponent
+    AkademikListComponent, AkademikNewComponent
   ]
 })
 export class MainModule { }

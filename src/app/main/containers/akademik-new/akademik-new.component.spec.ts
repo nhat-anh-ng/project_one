@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AkademikSingleComponent } from './akademik-single.component';
+import { AkademikNewComponent } from './akademik-new.component';
 
-describe('AkademikSingleComponent', () => {
-  let component: AkademikSingleComponent;
-  let fixture: ComponentFixture<AkademikSingleComponent>;
+describe('AkademikNewComponent', () => {
+  let component: AkademikNewComponent;
+  let fixture: ComponentFixture<AkademikNewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AkademikSingleComponent ]
+      declarations: [ AkademikNewComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AkademikSingleComponent);
+    fixture = TestBed.createComponent(AkademikNewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

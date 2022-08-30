@@ -1,9 +1,24 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainModule } from './main/main.module';
+
+export const routes: Routes = [
+  { path: 'main', 
+    loadChildren: () => import('./main/main.module').then(x => x.MainModule)
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'main' 
+  },
+  {
+    path: '**',
+    redirectTo: 'main'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -11,8 +26,8 @@ import { MainModule } from './main/main.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MainModule
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

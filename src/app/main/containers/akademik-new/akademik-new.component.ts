@@ -3,11 +3,11 @@ import { Akademik } from '../../models/akademik.model';
 import { AkademikService } from '../../services/akademik.service';
 
 @Component({
-  selector: 'app-akademik-single',
-  templateUrl: './akademik-single.component.html',
-  styleUrls: ['./akademik-single.component.scss']
+  selector: 'app-akademik-new',
+  templateUrl: './akademik-new.component.html',
+  styleUrls: ['./akademik-new.component.scss']
 })
-export class AkademikSingleComponent implements OnInit {
+export class AkademikNewComponent implements OnInit {
 
   constructor(private akademikService: AkademikService) { }
 

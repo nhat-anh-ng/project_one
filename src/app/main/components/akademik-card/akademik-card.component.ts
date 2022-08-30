@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Akademik } from '../../models/akademik.model';
+import { AkademikService } from '../../services/akademik.service';
 
 @Component({
   selector: 'app-akademik-card',
@@ -8,6 +10,12 @@ import { Akademik } from '../../models/akademik.model';
 })
 export class AkademikCardComponent {
   @Input() akademik!: Akademik;
-  constructor() { }
+  @Input() index: number | undefined;
+  akademikList: Akademik[] = [];
+  constructor(private akademikService: AkademikService) {}
 
+  viewDetails(akademikDetails: Akademik){
+    this.akademikService.akademikDetails(akademikDetails)
+    console.log(akademikDetails)
+  }
 }

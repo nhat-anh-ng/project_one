@@ -9,6 +9,10 @@ import { AkademikCardComponent } from './components/akademik-card/akademik-card.
 import { AkademikFormComponent } from './components/akademik-form/akademik-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AkademikDetailsComponent } from './components/akademik-details/akademik-details.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { ReviewListComponent } from './containers/review-list/review-list.component';
+import { ReviewFormComponent } from './components/review-form/review-form.component';
+import { ReviewNewComponent } from './containers/review-new/review-new.component';
 
 
 
@@ -29,7 +33,11 @@ export const routes: Routes = [
     AkademikNewComponent,
     AkademikFormComponent,
     AkademikInfopageComponent,
-    AkademikDetailsComponent
+    AkademikDetailsComponent,
+    ReviewCardComponent,
+    ReviewListComponent,
+    ReviewFormComponent,
+    ReviewNewComponent
   ],
   imports: [
     CommonModule,

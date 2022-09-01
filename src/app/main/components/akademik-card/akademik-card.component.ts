@@ -1,5 +1,4 @@
 import { Component, Input, Output } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Akademik } from '../../models/akademik.model';
 import { AkademikService } from '../../services/akademik.service';
 
@@ -9,6 +8,7 @@ import { AkademikService } from '../../services/akademik.service';
   styleUrls: ['./akademik-card.component.scss']
 })
 export class AkademikCardComponent {
+  
   @Input() akademik!: Akademik;
   @Input() index: number | undefined;
   akademikList: Akademik[] = [];

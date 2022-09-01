@@ -7,12 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { SafePipe } from './pipes/safe.pipe';
 import { AkademikCardComponent } from './components/akademik-card/akademik-card.component';
 import { AkademikFormComponent } from './components/akademik-form/akademik-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AkademikDetailsComponent } from './components/akademik-details/akademik-details.component';
-import { ReviewCardComponent } from './components/review-card/review-card.component';
-import { ReviewListComponent } from './containers/review-list/review-list.component';
-import { ReviewFormComponent } from './components/review-form/review-form.component';
-import { ReviewNewComponent } from './containers/review-new/review-new.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
+
 
 
 
@@ -29,19 +27,17 @@ export const routes: Routes = [
   declarations: [
     AkademikListComponent,
     SafePipe,
+    SearchFilterPipe,
     AkademikCardComponent,
     AkademikNewComponent,
     AkademikFormComponent,
     AkademikInfopageComponent,
     AkademikDetailsComponent,
-    ReviewCardComponent,
-    ReviewListComponent,
-    ReviewFormComponent,
-    ReviewNewComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ],
   exports: [

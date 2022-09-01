@@ -10,6 +10,8 @@ import { AkademikService } from '../../services/akademik.service';
   styleUrls: ['./akademik-list.component.scss']
 })
 export class AkademikListComponent implements OnInit {
+ searchFilter: string = '';
+ query: string = '';
   akademikList!: Akademik[];
   akademik$!: Observable<Akademik>;
   constructor(private akademikService: AkademikService, private route: ActivatedRoute) { 

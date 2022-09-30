@@ -1,7 +1,5 @@
-<div class="form-group">
-    <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="query" id="listSearch">
-</div>
+<app-toolbar></app-toolbar>
 <div>
-    <app-akademik-card class="mapUrl" *ngFor="let akademik of akademikList | searchFilter: query ; let i = index ; trackBy: trackById" [index]="i" [akademik]="akademik"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >
+    <app-akademik-card  class="mapUrl"  [dorms]="akademikList$ | async"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >
     </app-akademik-card>
 </div>

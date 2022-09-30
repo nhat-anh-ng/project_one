@@ -1,4 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map, Observable } from 'rxjs';
 import { Akademik } from '../../models/akademik.model';
 import { AkademikService } from '../../services/akademik.service';
 
@@ -9,13 +11,7 @@ import { AkademikService } from '../../services/akademik.service';
 })
 export class AkademikCardComponent {
   
-  @Input() akademik!: Akademik;
-  @Input() index: number | undefined;
-  akademikList: Akademik[] = [];
-  constructor(private akademikService: AkademikService) {}
-
-  viewDetails(akademikDetails: Akademik){
-    this.akademikService.akademikDetails(akademikDetails)
-    console.log(akademikDetails)
-  }
+  @Input() dorms: Akademik[] | null = [];
+ 
+  constructor() {}
 }

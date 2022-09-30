@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Akademik } from '../../models/akademik.model';
 
 @Component({
@@ -9,8 +9,6 @@ import { Akademik } from '../../models/akademik.model';
 })
 export class AkademikFormComponent implements OnInit{
   @Output() create: EventEmitter<Akademik> = new EventEmitter<Akademik>();
-
-  title = 'ReactiveForm';
   akademikForm!: FormGroup;
 
   constructor() { }
@@ -19,9 +17,9 @@ export class AkademikFormComponent implements OnInit{
       name: new FormControl(null, Validators.required),
       address: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      phone: new FormControl(null, Validators.required),
-      sector: new FormControl('public'),
-      url: new FormControl(null),
+      phone: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+      sector: new FormControl('public', [Validators.required]), 
+      url: new FormControl(''),
     })
   }
 

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Akademik } from '../models/akademik.model';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, of, shareReplay, tap } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -30,6 +30,7 @@ export class AkademikService {
     this.router.navigate(['/akademikList', {id: akademikId}])
     console.log(akademikId)
     }
+
 
   create(payload: Akademik){
     return this.http.post<Akademik>(`http://localhost:3000/akademikNew`, payload)

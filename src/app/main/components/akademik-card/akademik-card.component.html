@@ -1,4 +1,4 @@
-<mat-grid-list cols="3" rowHeight="3:3">
+<mat-grid-list [cols]="cols$ | async"  rowHeight="3:3">
     <mat-grid-tile *ngFor="let dorm of dorms" class="container">
         <mat-card class="container__card">
             <img mat-card-image [src]="dorm.img" alt="" class="container__card-img">

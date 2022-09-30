@@ -10,13 +10,14 @@ import { Akademik } from '../../models/akademik.model';
 export class AkademikFormComponent implements OnInit{
   @Output() create: EventEmitter<Akademik> = new EventEmitter<Akademik>();
   akademikForm!: FormGroup;
+  showMessage = false;
 
   constructor() { }
   ngOnInit(): void {
     this.akademikForm = new FormGroup({
-      name: new FormControl(null, Validators.required),
-      address: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email]),
+      name: new FormControl('', Validators.required),
+      address: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl(null, [Validators.required, Validators.minLength(5)]),
       sector: new FormControl('public', [Validators.required]), 
       url: new FormControl(''),
@@ -24,7 +25,12 @@ export class AkademikFormComponent implements OnInit{
   }
 
   onSubmit(){
-    this.create.emit(this.akademikForm.value)
+    this.create.emit(this.akademikForm.value);
+    this.showMessage = true;
+  }
+
+  onClose() {
+    this.showMessage = false;
   }
 
 }

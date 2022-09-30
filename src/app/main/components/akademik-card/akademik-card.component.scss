@@ -29,4 +29,14 @@
                 }
             }
         }
-
+@media screen and (max-width: 822px) {
+    .container {
+        &__card {
+                width: 100vw;
+                margin: 1rem;
+                &-img {
+                        max-height: auto;
+                    }
+        }
+    }
+}

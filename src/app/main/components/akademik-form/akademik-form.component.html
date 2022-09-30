@@ -1,6 +1,6 @@
-
-    
-    <form [formGroup]="akademikForm" (ngSubmit)="onSubmit()">
+<div class="card">
+    <form class="card__form" [formGroup]="akademikForm" (ngSubmit)="onSubmit()">
+        <h1 class="card__form-title">Register your dormitory</h1>
         <div>
             <mat-form-field class="card__form-field" appearance="fill">
                 <mat-label>Name</mat-label>
@@ -47,16 +47,16 @@
                 <input type="text" formControlName="url" placeholder="Ex." matInput >
             </mat-form-field>
         </div>
-    
-        <label for="sector">Sector</label>
-        <input type="radio" id="sector" value="public" formControlName="sector">
-        <label for="public" >Public</label>
-           
-        <input type="radio" id="sector" value="private" formControlName="sector">
-        <label for="private">Private</label>
-            
-    
-        <button type="submit" value="submit" id="btn" [disabled]="akademikForm.invalid"> Submit </button>
-    
-    </form>
 
+        <label for="sector">Sector:</label>
+        <div>
+        <mat-radio-group aria-label="Select an option" formControlName="sector">
+            <mat-radio-button color="primary" value="public"> Public </mat-radio-button>
+            <mat-radio-button color="primary" value="private"> Private </mat-radio-button>
+        </mat-radio-group>    
+        </div>
+        <div class="card__form-btn">
+        <button type="submit" value="submit"  mat-raised-button color="primary" [disabled]="akademikForm.invalid"> Submit </button>
+        </div>
+    </form>
+</div>

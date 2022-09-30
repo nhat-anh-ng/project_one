@@ -1,5 +1,6 @@
 <app-toolbar></app-toolbar>
+
 <div>
-    <app-akademik-card  class="mapUrl"  [dorms]="akademikList$ | async"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >
+    <app-akademik-card  [dorms]="akademikList$ | async" >
     </app-akademik-card>
 </div>

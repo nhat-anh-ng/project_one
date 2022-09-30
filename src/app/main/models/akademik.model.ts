@@ -6,5 +6,7 @@ export interface Akademik {
     email: string,
     sector: 'public' | 'private',
     url: string,
+    img?: string,
+    details: string,
     price?: number
 }

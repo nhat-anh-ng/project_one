@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon'
 
 import { AkademikListComponent } from './containers/akademik-list/akademik-list.component';
 import { AkademikNewComponent } from './containers/akademik-new/akademik-new.component';
@@ -47,6 +48,7 @@ export const routes: Routes = [
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     MatSelectModule,
     MatExpansionModule,
     MatButtonModule,

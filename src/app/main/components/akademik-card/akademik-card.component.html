@@ -1,19 +1,23 @@
-
-   <mat-card class="example-card" *ngFor="let akademik of dorms" >
-        <mat-card-header>
-            <mat-card-subtitle>{{ akademik.sector }}</mat-card-subtitle>
-            <mat-card-title>{{ akademik.name }}</mat-card-title>
-        </mat-card-header>
-        <iframe [src]='akademik.url | safe' frameborder="0"></iframe>
-        <mat-card-content>
-            <p>{{ akademik.address }}</p>
-            <p> (0-22){{ akademik.phone }}</p>
-            <p>{{ akademik.email }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-stroked-button color="primary"  [routerLink]="['/main/akademikList', akademik.id]">View details</button>
-        </mat-card-actions>
-    </mat-card>
-
-  
-
+<mat-grid-list cols="3" rowHeight="3:3">
+    <mat-grid-tile *ngFor="let dorm of dorms" class="container">
+        <mat-card class="container__card">
+            <img mat-card-image [src]="dorm.img" alt="" class="container__card-img">
+            <mat-card-content>
+                <ng-container [ngSwitch]="dorm.sector">
+                    <button *ngSwitchCase="'public'" class="container__card-sector" mat-button color="primary">PUBLIC</button>
+                    <button *ngSwitchCase="'private'" class="container__card-sector" mat-button color="accent">PRIVATE</button>
+                </ng-container>
+                <a [routerLink]="dorm.id" class="container__card-name">
+                    {{dorm.name}}
+                </a>
+                <p>{{ dorm.address }}</p>
+                {{ dorm.phone }}
+                <p>{{ dorm.email }}</p>
+            </mat-card-content>
+            <mat-card-actions class="container__card-btn">
+                <button mat-stroked-button color="primary" [routerLink]="['/main/akademikList', dorm.id]">View details</button>
+            </mat-card-actions>
+        
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

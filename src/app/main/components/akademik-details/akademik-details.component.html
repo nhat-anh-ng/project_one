@@ -1,11 +1,42 @@
-<div>
-    <iframe [src]='akademik.url | safe' frameborder="0"></iframe>
-</div>
-<div class="akademik-card">
-    <a routerLink="/akademikList/{{akademik.id}}">{{ akademik.name }}</a>
-    <p>{{ akademik.address }}</p>
-    <p> (0-22){{ akademik.phone }}</p>
-    <p>{{ akademik.email }}</p>
-    <p>{{ akademik.sector }}</p>
-
+<div class="container">
+    <mat-card class="container__card">
+        <mat-card-header>
+            <mat-card-title class="container__card-name">{{akademik.name}}</mat-card-title>
+            <mat-card-subtitle>{{akademik.address}}</mat-card-subtitle>
+            <ng-container [ngSwitch]="akademik.sector">
+                <button *ngSwitchCase="'public'" class="container__card-sector" mat-raised-button
+                    color="primary">PUBLIC</button>
+                <button *ngSwitchCase="'private'" class="container__card-sector" mat-raised-button
+                    color="accent">PRIVATE</button>
+            </ng-container>
+            <img class="container__card-img" mat-card-avatar [src]="akademik.img" alt="img">
+        </mat-card-header>
+        <iframe mat-card-image class="container__card-iframe" height="300" [src]="akademik.url || '' | safe"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <mat-card-content>
+            <p>
+                {{akademik.details}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button class="container__card-sector">
+                <ng-container [ngSwitch]="akademik.sector">
+                    <mat-icon color="accent" *ngSwitchCase="'private'" mat-button class="container__card-sector">phone
+                    </mat-icon>
+                    <mat-icon color="primary" *ngSwitchCase="'public'" mat-button class="container__card-sector">phone
+                    </mat-icon>
+                </ng-container>
+                <p>{{akademik.phone}}</p>
+            </button>
+            <button mat-button class="container__card-sector">
+                <ng-container [ngSwitch]="akademik.sector">
+                    <mat-icon color="accent" *ngSwitchCase="'private'" mat-button class="container__card-sector">email
+                    </mat-icon>
+                    <mat-icon color="primary" *ngSwitchCase="'public'" mat-button class="container__card-sector">email
+                    </mat-icon>
+                </ng-container>
+                <p>{{akademik.email}}</p>
+            </button>
+        </mat-card-actions>
+    </mat-card>
 </div>

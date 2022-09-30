@@ -8,7 +8,6 @@ import { Akademik } from '../../models/akademik.model';
 })
 export class AkademikDetailsComponent implements OnInit {
   @Input() akademik!: Akademik;
-  @Input() index!: number;
   constructor() { }
 
   ngOnInit(): void {

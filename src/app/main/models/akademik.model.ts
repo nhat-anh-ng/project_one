@@ -8,5 +8,6 @@ export interface Akademik {
     url: string,
     img?: string,
     details: string,
+    district?: string,
     price?: number
 }

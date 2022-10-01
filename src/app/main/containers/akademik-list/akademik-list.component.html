@@ -1,6 +1,44 @@
 <app-toolbar></app-toolbar>
+<form [formGroup]="sectorForm">
+<mat-form-field class="card__form-field" appearance="fill">
+    <mat-label>Filter by sector</mat-label>
+    <mat-select #selector #matRef formControlName="sector" >
+        <div>
+        <mat-option (click)="selector.open()" value="public">
+            Public
+            
+        </mat-option>
+        <mat-option (click)="selector.open()" value="private">
+            Private
+        </mat-option>
+        <button  mat-flat-button color="primary" (click)="onSectorSelect($event)">OK</button>
+        </div>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field class="card__form-field" appearance="fill">
+    <mat-label>Filter by district</mat-label>
+    <mat-select #select #mat formControlName="district">
+        <div>
+            <mat-option (click)="select.open()" value="ochota">
+                Ochota
+            </mat-option>
+            <mat-option (click)="select.open()" value="praga">
+                Praga
+            </mat-option>
+            <mat-option (click)="select.open()" value="srodmiescie">
+                Śródmieście
+            </mat-option>
+            <mat-option (click)="select.open()" value="mokotow">
+                Mokotów
+            </mat-option>
+            <button mat-flat-button color="primary" (click)="onDistrictSelect($event)">OK</button>
+        </div>
+    </mat-select>
+</mat-form-field>
+</form>
 
 <div>
-    <app-akademik-card  [dorms]="akademikList$ | async" >
+    <app-akademik-card  [dorms]="filteredDorms$ | async" [dorms]="filteredDistrict$ | async" >
     </app-akademik-card>
 </div>

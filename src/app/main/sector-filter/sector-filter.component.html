@@ -1,0 +1,17 @@
+<form [formGroup]="sectorForm">
+    <mat-form-field class="card__form-field" appearance="fill">
+        <mat-label>Filter by sector</mat-label>
+        <mat-select #selector #matRef formControlName="sector">
+            <div>
+                <mat-option (click)="selector.open()" value="public">
+                    Public
+
+                </mat-option>
+                <mat-option (click)="selector.open()" value="private">
+                    Private
+                </mat-option>
+                <button mat-flat-button color="primary" (click)="onSectorSelect($event)">OK</button>
+            </div>
+        </mat-select>
+    </mat-form-field>
+</form>

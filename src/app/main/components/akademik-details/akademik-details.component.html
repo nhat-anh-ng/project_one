@@ -4,9 +4,9 @@
             <mat-card-title class="container__card-name">{{akademik.name}}</mat-card-title>
             <mat-card-subtitle>{{akademik.district}} {{akademik.address}} </mat-card-subtitle>
             <ng-container [ngSwitch]="akademik.sector">
-                <button *ngSwitchCase="'public'" class="container__card-sector" mat-raised-button
+                <button *ngSwitchCase="'public'" class="container__card-sector" mat-raised-button [disableRipple]="true"
                     color="primary">PUBLIC</button>
-                <button *ngSwitchCase="'private'" class="container__card-sector" mat-raised-button
+                <button *ngSwitchCase="'private'" class="container__card-sector" mat-raised-button [disableRipple]="true"
                     color="accent">PRIVATE</button>
             </ng-container>
             <img class="container__card-img" mat-card-avatar [src]="akademik.img" alt="img">
@@ -19,7 +19,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button class="container__card-sector">
+            <button mat-button class="container__card-sector" [disableRipple]="true">
                 <ng-container [ngSwitch]="akademik.sector">
                     <mat-icon color="accent" *ngSwitchCase="'private'" mat-button class="container__card-sector">phone
                     </mat-icon>
@@ -28,7 +28,7 @@
                 </ng-container>
                 <p>{{akademik.phone}}</p>
             </button>
-            <button mat-button class="container__card-sector">
+            <button mat-button class="container__card-sector" [disableRipple]="true">
                 <ng-container [ngSwitch]="akademik.sector">
                     <mat-icon color="accent" *ngSwitchCase="'private'" mat-button class="container__card-sector">email
                     </mat-icon>

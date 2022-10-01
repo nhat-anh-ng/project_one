@@ -1,3 +1,18 @@
-.container__card-sector{
-    margin: 0 0 0.5rem auto;
+.container{
+    &__card{
+        &-sector{
+            margin: 0 0 0.5rem auto;
+            cursor: default;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+            &__card {
+                &-sector {
+                    padding: 0;
+                }
+            }
+        }
 }

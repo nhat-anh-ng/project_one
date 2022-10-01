@@ -1,6 +1,6 @@
 <app-toolbar></app-toolbar>
-<form [formGroup]="sectorForm">
-<mat-form-field class="card__form-field" appearance="fill">
+<form [formGroup]="sectorForm" class="form">
+<mat-form-field class="form__field" appearance="fill">
     <mat-label>Filter by sector</mat-label>
     <mat-select #selector #matRef formControlName="sector" >
         <div>
@@ -11,12 +11,14 @@
         <mat-option (click)="selector.open()" value="private">
             Private
         </mat-option>
-        <button  mat-flat-button color="primary" (click)="onSectorSelect($event)">OK</button>
+        <div class="form__btn">
+            <button mat-flat-button color="primary"  (click)="onSectorSelect($event)">OK</button>
+        </div>
         </div>
     </mat-select>
 </mat-form-field>
 
-<mat-form-field class="card__form-field" appearance="fill">
+<mat-form-field appearance="fill" class="form__field">
     <mat-label>Filter by district</mat-label>
     <mat-select #select #mat formControlName="district">
         <div>
@@ -32,7 +34,9 @@
             <mat-option (click)="select.open()" value="MOKOTÓW">
                 Mokotów
             </mat-option>
+            <div class="form__btn">
             <button mat-flat-button color="primary" (click)="onDistrictSelect($event)">OK</button>
+            </div>
         </div>
     </mat-select>
 </mat-form-field>

@@ -58,15 +58,15 @@
             </mat-form-field>
         </div>
 
-        <label for="sector">Sector:</label>
+        <label class="card__form-select" for="sector">Sector:</label>
         <div>
         <mat-radio-group aria-label="Select an option" formControlName="sector">
-            <mat-radio-button color="primary" value="public"> Public </mat-radio-button>
+            <mat-radio-button class="card__form-select-btn" color="primary" value="public"> Public </mat-radio-button>
             <mat-radio-button color="primary" value="private"> Private </mat-radio-button>
         </mat-radio-group>    
         </div>
         <div class="card__form-btn">
-        <button type="submit" value="submit"  mat-raised-button color="primary" [disabled]="akademikForm.invalid"> Submit </button>
+        <button class="card__form-btn-submit" type="submit" value="submit"  mat-raised-button color="primary" [disabled]="akademikForm.invalid"> Submit </button>
         </div>
     </form>
 </div>

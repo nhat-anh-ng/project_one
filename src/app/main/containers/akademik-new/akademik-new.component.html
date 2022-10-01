@@ -1,2 +1,6 @@
 <app-toolbar></app-toolbar>
+<mat-card class="alert" *ngIf="showMessage">
+    <h2 class="alert-text">Your dormitory has been saved. We will contact you in 24h.</h2>
+    <mat-icon class="alert-icon" (click)="onClose()">close</mat-icon>
+</mat-card>
 <app-akademik-form (create)="onCreate($event)"></app-akademik-form>

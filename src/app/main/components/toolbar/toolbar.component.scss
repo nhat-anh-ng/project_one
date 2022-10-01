@@ -1,11 +1,23 @@
-.example-spacer {
+.spacer {
     flex: 1 1 auto;
 }
-.example-icon {
+.item {
     padding: 0 14px;
 }
 a{
     color: aliceblue;
     text-decoration: none;
     font-family: "Fraunces", serif;
+}
+mat-toolbar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 20;
+}
+
+@media screen and (max-width: 700px) {
+    a{
+        font-size: smaller;
+    }
 }

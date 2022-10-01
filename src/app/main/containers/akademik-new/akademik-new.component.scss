@@ -1,0 +1,21 @@
+.alert {
+    background-color: rgba(0, 128, 0, 0.869);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 82;
+
+    &-text {
+        border-top: 0;
+        margin-block-end: 0rem;
+        font-family: "Fraunces", serif;
+    }
+
+    &-icon {
+        margin-top: 0.3rem;
+        cursor: pointer;
+    }
+}

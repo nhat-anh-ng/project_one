@@ -10,7 +10,6 @@ import { Akademik } from '../../models/akademik.model';
 export class AkademikFormComponent implements OnInit{
   @Output() create: EventEmitter<Akademik> = new EventEmitter<Akademik>();
   akademikForm!: FormGroup;
-  showMessage = false;
 
   constructor() { }
   ngOnInit(): void {
@@ -27,11 +26,7 @@ export class AkademikFormComponent implements OnInit{
 
   onSubmit(){
     this.create.emit(this.akademikForm.value);
-    this.showMessage = true;
-  }
-
-  onClose() {
-    this.showMessage = false;
+    this.akademikForm.reset();
   }
 
 }

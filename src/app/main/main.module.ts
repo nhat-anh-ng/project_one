@@ -24,6 +24,7 @@ import { AkademikFormComponent } from './components/akademik-form/akademik-form.
 import { AkademikDetailsComponent } from './components/akademik-details/akademik-details.component';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { SafePipe } from './pipes/safe.pipe';
+import { SectorFilterComponent } from './sector-filter/sector-filter.component';
 
 export const routes: Routes = [
   { path: 'akademikList', component:AkademikListComponent },
@@ -42,7 +43,8 @@ export const routes: Routes = [
     AkademikFormComponent,
     AkademikInfopageComponent,
     AkademikDetailsComponent,
-    ToolbarComponent
+    ToolbarComponent,
+     SectorFilterComponent,
   ],
   imports: [
     CommonModule,

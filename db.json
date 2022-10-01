@@ -87,13 +87,14 @@
   ],
   "akademikNew": [
     {
-      "name": "test",
-      "address": "test",
-      "email": "test@test.pl",
-      "phone": 123,
-      "sector": "private",
-      "url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9770.958907978667!2d21.0796766!3d52.248111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae4c91d06137d32d!2sDormitory%20No.%203%20University%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1661534854610!5m2!1sen!2spl",
-      "id": "BlpTp_z"
+      "name": "h",
+      "address": "h",
+      "district": "h",
+      "email": "test@test.com",
+      "phone": 1,
+      "sector": "public",
+      "url": "",
+      "id": "d9kILet"
     }
   ]
 }

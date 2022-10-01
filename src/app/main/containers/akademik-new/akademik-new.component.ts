@@ -8,14 +8,19 @@ import { AkademikService } from '../../services/akademik.service';
   styleUrls: ['./akademik-new.component.scss']
 })
 export class AkademikNewComponent implements OnInit {
-
+  showMessage = false;
   constructor(private akademikService: AkademikService) { }
 
   ngOnInit(): void {
   }
 
   onCreate(akademik: Akademik){
-    this.akademikService.create(akademik).subscribe(() => console.log("created new item"));
+    this.akademikService.create(akademik).subscribe();
+    this.showMessage = true;
+  }
+
+   onClose() {
+    this.showMessage = false;
   }
 
 }

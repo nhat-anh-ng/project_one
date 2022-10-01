@@ -20,16 +20,16 @@
     <mat-label>Filter by district</mat-label>
     <mat-select #select #mat formControlName="district">
         <div>
-            <mat-option (click)="select.open()" value="ochota">
+            <mat-option (click)="select.open()" value="OCHOTA">
                 Ochota
             </mat-option>
-            <mat-option (click)="select.open()" value="praga">
+            <mat-option (click)="select.open()" value="PRAGA">
                 Praga
             </mat-option>
-            <mat-option (click)="select.open()" value="srodmiescie">
+            <mat-option (click)="select.open()" value="ŚRÓDMIEŚCIE">
                 Śródmieście
             </mat-option>
-            <mat-option (click)="select.open()" value="mokotow">
+            <mat-option (click)="select.open()" value="MOKOTÓW">
                 Mokotów
             </mat-option>
             <button mat-flat-button color="primary" (click)="onDistrictSelect($event)">OK</button>

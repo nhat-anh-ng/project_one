@@ -23,6 +23,16 @@
 
         <div>
             <mat-form-field class="card__form-field" appearance="fill">
+                <mat-label>District</mat-label>
+                <input type="text" formControlName="district" placeholder="Ex. Address" matInput required>
+                <mat-error>
+                    District is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="card__form-field" appearance="fill">
                 <mat-label>Phone</mat-label>
                 <input type="number" formControlName="phone" placeholder="Ex." matInput required>
                 <mat-error>

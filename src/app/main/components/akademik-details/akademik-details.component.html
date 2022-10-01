@@ -2,7 +2,7 @@
     <mat-card class="container__card">
         <mat-card-header>
             <mat-card-title class="container__card-name">{{akademik.name}}</mat-card-title>
-            <mat-card-subtitle>{{akademik.address}}</mat-card-subtitle>
+            <mat-card-subtitle>{{akademik.district}} {{akademik.address}} </mat-card-subtitle>
             <ng-container [ngSwitch]="akademik.sector">
                 <button *ngSwitchCase="'public'" class="container__card-sector" mat-raised-button
                     color="primary">PUBLIC</button>

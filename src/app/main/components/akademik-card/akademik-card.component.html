@@ -10,7 +10,8 @@
                 <a [routerLink]="dorm.id" class="container__card-name">
                     {{dorm.name}}
                 </a>
-                <p>{{ dorm.address }}</p>
+                <p>{{ dorm.address }} - {{dorm.district}}</p>
+                
                 {{ dorm.phone }}
                 <p>{{ dorm.email }}</p>
             </mat-card-content>

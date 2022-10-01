@@ -17,6 +17,7 @@ export class AkademikFormComponent implements OnInit{
     this.akademikForm = new FormGroup({
       name: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
+      district: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl(null, [Validators.required, Validators.minLength(5)]),
       sector: new FormControl('public', [Validators.required]), 

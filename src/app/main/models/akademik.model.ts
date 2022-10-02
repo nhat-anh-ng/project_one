@@ -1,5 +1,5 @@
 export interface Akademik {
-    id?: string,
+    id: string,
     name:string,
     address: string,
     phone: number,

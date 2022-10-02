@@ -10,7 +10,7 @@ import { Akademik } from "../models/akademik.model";
 export class AkademikStore {
     private subject = new BehaviorSubject<Akademik[]>([]);
     dorms$: Observable<Akademik[]> = this.subject.asObservable();
-    public readonly server = ' http://localhost:3000/akademikList';
+    public readonly server = 'https://my-json-server.typicode.com/nhat-anh-ng/project_one/akademikList';
     
     constructor(private http: HttpClient){
         this.loadAllDorms();

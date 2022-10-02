@@ -13,12 +13,12 @@ export class AkademikService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getAkademikById(id:number): Observable<Akademik>{
-    const urlById = `${'http://localhost:3000/akademikList'}/${id}`;
+    const urlById = `${'https://my-json-server.typicode.com/nhat-anh-ng/project_one/akademikList'}/${id}`;
     return this.http.get<Akademik>(urlById);
   }
 
   create(payload: Akademik){
-    return this.http.post<Akademik>(`http://localhost:3000/akademikNew`, payload)
+    return this.http.post<Akademik>(`https://my-json-server.typicode.com/nhat-anh-ng/project_one/akademikNew`, payload)
       .pipe(
         tap((akademik) => {
           this.akademikList = [...this.akademikList, akademik]
